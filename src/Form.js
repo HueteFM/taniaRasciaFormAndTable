@@ -13,7 +13,7 @@ class Form extends Component {
     }
 
     handleChange = event => {
-        const { name, value } = event.target;
+        const { name, value } = event.target; //name vem da propriedade html, indicará job ou name.
 
         this.setState({
             [name]: value
@@ -21,8 +21,9 @@ class Form extends Component {
     }
 
     submitForm = () => {
-        this.props.handleSubmit(this.state);
-        this.setState(this.initialState);
+        this.props.handleSubmit(this.state); //lá em app, um novo objeto (character) é adicionado a characters
+        this.setState(this.initialState); //o estado de form recebe o estado de initialState 
+                                          // em form tem this.state e this.initialState.
     }
 
     render() {

@@ -20,7 +20,8 @@ class App extends Component {
   }
 
   handleSubmit = character => {
-    this.setState({ characters: [...this.state.characters, character] });
+    this.setState({ characters: [...this.state.characters, character] }); //eh parecido com push. ...rest pega o conteudo do vetor
+                                                                          // e adiciona um elemento.
   }
 
   render() {
